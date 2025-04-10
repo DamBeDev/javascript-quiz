@@ -1,6 +1,7 @@
 import './App.css'
 import { Container, Stack, Typography } from '@mui/material'
 import { JavaScriptLogo } from './JavaScriptLogo'
+import { Start } from './Start'
 
 import '@fontsource/roboto/300.css'
 import '@fontsource/roboto/400.css'
@@ -19,6 +20,8 @@ function App() {
             JavaScript Quizz
           </Typography>
         </Stack>
+
+        <Start />
 
       </Container>
     </>
