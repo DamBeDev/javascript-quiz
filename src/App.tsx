@@ -7,8 +7,10 @@ import '@fontsource/roboto/300.css'
 import '@fontsource/roboto/400.css'
 import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
+import { useQuestionsStore } from './store/questions'
 
 function App() {
+  const questions = useQuestionsStore(state => state.questions)
 
   return (
     <>
@@ -21,7 +23,8 @@ function App() {
           </Typography>
         </Stack>
 
-        <Start />
+        {questions.length === 0 && <Start />}
+        {questions.length > 0 && <h1>Juego</h1>}
 
       </Container>
     </>
